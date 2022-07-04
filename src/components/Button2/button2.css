@@ -1,0 +1,12 @@
+.primary {
+    --var-bg: red;
+
+    color: var(--bg-color);
+    border: 1px solid white;
+    background-color: var(--var-bg);
+    &:hover {
+        color: orange;
+        border-color: orange;
+        background-color: white;
+    }
+}

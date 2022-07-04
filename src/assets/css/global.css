@@ -1,0 +1,31 @@
+:global {
+    :root {
+        --bg-color: green;
+        --border-color: red;
+        --breakpoints: (sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+    }
+
+    .app {
+        font-family: helvetica, arial, sans-serif;
+        padding: 2em;
+        border: 5px solid var(--border-color);
+
+        p {
+            --bg-color: orange;
+            background-color: var(--bg-color);
+        }
+    }
+}
+
+@for $i from 1 to 10 {
+    .p-$i {
+        /* prettier-ignore */
+        padding: $(i)rem;
+    }
+}
+
+@each $key, $value in var(--breakpoints) {
+    .container-$(key) {
+        max-width: $(value);
+    }
+}
