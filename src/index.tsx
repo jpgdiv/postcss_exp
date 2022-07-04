@@ -9,10 +9,10 @@ const root = createRoot(container!);
 root.render(
     <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Home />}>
+            <Route path="/" element={<PostCSS />}>
                 {/* <Route index element={<Home />} /> */}
             </Route>
-            <Route path="/post" element={<PostCSS />} />
+            <Route path="/home" element={<Home />} />
         </Routes>
     </BrowserRouter>,
 );
